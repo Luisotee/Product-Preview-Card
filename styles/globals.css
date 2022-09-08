@@ -1,3 +1,37 @@
 body {
     background-color: hsl(30, 38%, 92%);
   }
+
+  @media only screen and (max-width: 600px) {
+    .container{
+        display: flex;
+        margin: 25px auto;
+        flex-direction: column;
+        width: 350px;
+        height: 600px;
+    }
+    .flex-item-1 .perf-img{
+        width: 350px;
+        height: auto;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+    }
+    .category{
+        padding-top: 5px;
+    }
+    h1{
+        margin-top: 5px;
+    }
+    .prices{
+        padding-top: 10px;
+        margin-bottom: 0;
+        
+    }
+    .buy-item{
+        width: 300px;
+        height: 45px;
+    }
+    
+  }
+

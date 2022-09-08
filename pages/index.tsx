@@ -5,7 +5,18 @@ import { MainCard } from '../components/main-card';
 const Home: NextPage = () => {
   return (
     <>
-      <MainCard />
+      <Group
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '98vh',
+        }}
+      >
+        <Group>
+          <MainCard />
+        </Group>
+      </Group>
     </>
   );
 };
