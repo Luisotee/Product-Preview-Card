@@ -45,20 +45,22 @@ export function Description() {
           <Text style={{ textDecoration: 'line-through' }}>$169.99</Text>
         </Grid.Col>
       </Grid>
-      <Button
-        style={{
-          width: '240px',
-          height: '45px',
-          fontFamily: 'Montserrat',
-          fontWeight: '700',
-          color: 'white',
-        }}
-        color="teal"
-        radius="md"
-      >
-        <Image src="icon-cart.svg" p="sm" />
-        Add to Cart
-      </Button>
+      <Group p="sm" position="center">
+        <Button
+          style={{
+            width: '240px',
+            height: '45px',
+            fontFamily: 'Montserrat',
+            fontWeight: '700',
+            color: 'white',
+          }}
+          color="teal"
+          radius="md"
+        >
+          <Image src="icon-cart.svg" p="sm" />
+          Add to Cart
+        </Button>
+      </Group>
     </Group>
   );
 }
