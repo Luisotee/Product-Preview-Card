@@ -1,18 +1,37 @@
-import { Group } from '@mantine/core';
+import { Image } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function ImageComponent() {
+  const matches = useMediaQuery('(min-width: 600px)');
+
+  return <div>{matches ? <DesktopImage /> : <MobileImage />}</div>;
+}
+
+function DesktopImage() {
   return (
-    <picture
+    <Image
       style={{
         margin: '0px',
         display: 'flex',
-        width: '50%',
+        width: '100%',
         height: '440px',
       }}
-    >
-      <source media="(max-width: 30rem)" srcSet="image-product-mobile.jpg" />
-      <source media="(min-width: 50rem)" srcSet="image-product-desktop.jpg" />
-      <img src="image-product-desktop.jpg" alt="preview-photo" />
-    </picture>
+      src="image-product-desktop.jpg"
+    ></Image>
+  );
+}
+
+function MobileImage() {
+  return (
+    <Image
+      style={{
+        margin: '0px',
+        display: 'flex',
+        width: '375px',
+        height: '100%',
+        flexDirection: 'column',
+      }}
+      src="image-product-mobile.jpg"
+    ></Image>
   );
 }
